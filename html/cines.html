@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" type="text/css" href="../css/style_cines.css">
   <script src="../js/desplegable.js" type="text/javascript"></script>
+  <script src="../js/cines/elegir_cine.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -94,9 +95,9 @@
               <li><a href="#">Cines<span class="caret"/></a>
                 <div>
                   <ul>
-                    <li><a href="#">Nueva Condomina (Murcia)</a></li>
-                    <li><a href="#">La Cañada (Málaga)</a></li>
-                    <li><a href="#">Capitol (Madrid)</a></li>
+                    <li><a onclick="elegir_cine('Nueva Condomina (Murcia)')" href="#">Nueva Condomina (Murcia)</a></li>
+                    <li><a onclick="elegir_cine('La Cañada (Málaga)')" href="#">La Cañada (Málaga)</a></li>
+                    <li><a onclick="elegir_cine('Capitol (Madrid)')" href="#">Capitol (Madrid)</a></li>
                   </ul>
                 </div>
               </li>
@@ -109,7 +110,7 @@
 
         <div id="section_cine">
           <div id="section_cine_nombre">
-            Nueva Condomina
+            Nueva Condomina (Murcia)
           </div>
 
           <div class="cine_seccion">
@@ -117,18 +118,18 @@
               ¿Cómo es por dentro?
             </div>
             <div class="cine_seccion_cuerpo">
-              <img class="fotografia" src="../img/cines/cine_nueva_condomina.jpg" alt="Nueva Condomina"/>
+              <img id="section_cine_foto" class="fotografia" src="../img/cines/cine_nueva_condomina.jpg" alt="Nueva Condomina (Murcia)"/>
             </div>
           </div>
 
           <div class="cine_seccion">
             <div class="cine_seccion_titulo">
               Ubicación
-              <a class="maps" target="_blank" href="https://www.google.es/maps/search/Cinesa/@38.039819,-1.14849,16z">
-                <img src="../img/cines/maps.png" height=30em width=auto />
+              <a id="section_cine_gps" target="_blank" href="https://www.google.es/maps/search/Cinesa/@38.039819,-1.14849,16z">
+                <img class="maps" src="../img/cines/maps.png" />
               </a>
             </div>
-            <div class="cine_seccion_cuerpo">
+            <div id="section_cine_ubicacion" class="cine_seccion_cuerpo">
               Este cine se encuentra en Murcia, en el centro comercial Nueva Condomina.
             </div>
           </div>
@@ -137,18 +138,28 @@
             <div class="cine_seccion_titulo">
               Aforo
             </div>
-            <div class="cine_seccion_cuerpo">
+            <div id="section_cine_aforo" class="cine_seccion_cuerpo">
               Este cine cuenta con 14 salas de cine, con un aforo total para 2946 personas.
             </div>
           </div>
 
         </div>
 
+        <div id="section_cine_informacion">
+          <div class="cine_seccion">
+            <div class="cine_seccion_titulo">
+              Ver información
+            </div>
+            <div class="cine_seccion_cuerpo">
+              Para ver la información de uno de nuestros cines, elija uno en el desplegable de arriba.
+            </div>
+          </div>
+        </div>
+
+        </div>
+
       </div>
     </div>
-
-
-
 
   </div>
 

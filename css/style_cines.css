@@ -106,9 +106,14 @@ nav#nav_cines > ul > li:hover > div {
 CINE
 */
 
-#section_cine{
+#section_cine,
+#section_cine_informacion{
   font-size: 2em;
   padding-bottom: 0.2em;
+}
+
+#section_cine{
+  display: none;
 }
 
 .cine_seccion{
@@ -137,4 +142,6 @@ CINE
 
 .cine_seccion img.maps{
   vertical-align:middle;
+  height: 1em;
+  width:auto;
 }
