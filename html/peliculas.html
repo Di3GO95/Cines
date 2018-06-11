@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" type="text/css" href="../css/style_peliculas.css">
   <script src="../js/desplegable.js" type="text/javascript"></script>
+  <script src="../js/peliculas/elegir_pelicula.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -94,23 +95,23 @@
           </div>
           <div class="peliculas_cuerpo">
             <ul>
-              <li class="lista_pelicula">
+              <li onclick="elegir_pelicula('Jurassic World El reino caído')" class="lista_pelicula">
                 <div class="pelicula_titulo">
-                  Jurassic World: El reino caído
+                  Jurassic World El reino caído
                 </div>
                 <div class="pelicula_imagen">
                   <img src="../img/peliculas/jurassic_world.jpg" alt="Jurassic World" />
                 </div>
               </li>
-              <li class="lista_pelicula">
+              <li onclick="elegir_pelicula('Vengadores Infinity War')" class="lista_pelicula">
                 <div class="pelicula_titulo">
-                  Vengadores: Infinity War
+                  Vengadores Infinity War
                 </div>
                 <div class="pelicula_imagen">
                   <img src="../img/peliculas/vengadores_infinity_war.jpg" alt="Vengadores Infinity War"/>
                 </div>
               </li>
-              <li class="lista_pelicula">
+              <li onclick="elegir_pelicula('Deadpool 2')" class="lista_pelicula">
                 <div class="pelicula_titulo">
                   Deadpool 2
                 </div>
@@ -121,8 +122,12 @@
             </ul>
           </div>
 
-          <div class="peliculas_titulo">
-            Jurassic World: El reino caído
+        </div>
+
+        <div id="pelicula_elegida">
+          
+          <div id="titulo" class="peliculas_titulo">
+            Jurassic World El reino caído
           </div>
           <div id="pelicula" class="peliculas_cuerpo">
             <div class="pelicula_elemento">
@@ -139,7 +144,7 @@
                 <span class="ficha_tecnica_titulo">
                   Título original:
                 </span>
-                <span class="ficha_tecnica_contenido">
+                <span id="titulo_original" class="ficha_tecnica_contenido">
                   Jurassic World: Fallen Kingdom
                 </span>
               </div>
@@ -148,7 +153,7 @@
                 <span class="ficha_tecnica_titulo">
                   Año:
                 </span>
-                <span class="ficha_tecnica_contenido">
+                <span id="anyo" class="ficha_tecnica_contenido">
                   2018
                 </span>
               </div>
@@ -157,7 +162,7 @@
                 <span class="ficha_tecnica_titulo">
                   Dirección:
                 </span>
-                <span class="ficha_tecnica_contenido">
+                <span id="direccion" class="ficha_tecnica_contenido">
                   J.A. Bayona
                 </span>
               </div>
@@ -166,7 +171,7 @@
                 <span class="ficha_tecnica_titulo">
                   Reparto:
                 </span>
-                <span class="ficha_tecnica_contenido">
+                <span id="reparto" class="ficha_tecnica_contenido">
                   Chris Pratt, Bryce Dallas Howard, James Cromwell, Rafe Spall, Toby Jones, Justice Smith, Daniella Pineda, Ted Levine, Geraldine Chaplin, Jeff Goldblum
                 </span>
               </div>
@@ -175,7 +180,7 @@
                 <span class="ficha_tecnica_titulo">
                   Género:
                 </span>
-                <span class="ficha_tecnica_contenido">
+                <span id="genero" class="ficha_tecnica_contenido">
                   Ciencia ficción. Aventuras
                 </span>
               </div>
@@ -185,12 +190,20 @@
 
         </div>
 
+
+
+        <div id="peliculas_informacion">
+          <div class="info_titulo">
+            Ver información
+          </div>
+          <div class="info_cuerpo">
+            Para ver la información sobre una de las películas, pinche en ella.
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-
-
-
 
   <footer>
     <div id="footer">
