@@ -1,0 +1,6 @@
+Deadpool 2
+../img/peliculas/deadpool_2.jpg
+Jurassic world
+../img/peliculas/jurassic_world.jpg
+Vengadores Infinity War
+../img/peliculas/vengadores_infinity_war.jpg

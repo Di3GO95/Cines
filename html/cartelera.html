@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" type="text/css" href="../css/style_cartelera.css">
   <script src="../js/desplegable.js" type="text/javascript"></script>
+  <script src="../js/cartelera/elegir_cartelera.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -93,9 +94,9 @@
               <li><a href="#">Cines<span class="caret"/></a>
                 <div>
                   <ul>
-                    <li><a href="#">Nueva Condomina (Murcia)</a></li>
-                    <li><a href="#">La Cañada (Málaga)</a></li>
-                    <li><a href="#">Capitol (Madrid)</a></li>
+                    <li><a onclick="elegir_cartelera('Nueva Condomina (Murcia)')" href="#">Nueva Condomina (Murcia)</a></li>
+                    <li><a onclick="elegir_cartelera('La Cañada (Málaga)')" href="#">La Cañada (Málaga)</a></li>
+                    <li><a onclick="elegir_cartelera('Capitol (Madrid)')" href="#">Capitol (Madrid)</a></li>
                   </ul>
                 </div>
               </li>
@@ -106,7 +107,7 @@
 
         <div id="section_cartelera">
           <div id="section_cine_nombre">
-            Nueva Condomina
+
           </div>
 
           <div class="cartelera_seccion">
@@ -116,16 +117,15 @@
             <div class="cartelera_seccion_cuerpo">
 
               <div id="peliculas">
-
                   <ul>
                     <li class="lista_pelicula">
 
-                      <div class="pelicula_titulo">
-                        Jurassic World: El reino caído
+                      <div id="titulo1" class="pelicula_titulo">
+
                       </div>
 
                       <div class="pelicula_imagen">
-                        <img src="../img/peliculas/jurassic_world.jpg" alt="Jurassic World" />
+                        <img id="imagen1"/>
                       </div>
 
                       <div class="sesiones">
@@ -146,11 +146,11 @@
 
                     </li>
                     <li class="lista_pelicula">
-                      <div class="pelicula_titulo">
-                        Vengadores: Infinity War
+                      <div id="titulo2" class="pelicula_titulo">
+
                       </div>
                       <div class="pelicula_imagen">
-                        <img src="../img/peliculas/vengadores_infinity_war.jpg" alt="Vengadores Infinity War"/>
+                        <img id="imagen2"/>
                       </div>
 
                       <div class="sesiones">
@@ -170,14 +170,14 @@
                           <button class="sesiones_boton">23:45</button>
                         </div>
                       </div>
-
                     </li>
+
                     <li class="lista_pelicula">
-                      <div class="pelicula_titulo">
-                        Deadpool 2
+                      <div id="titulo3" class="pelicula_titulo">
+
                       </div>
                       <div class="pelicula_imagen">
-                        <img src="../img/peliculas/deadpool_2.jpg" alt="Deadpool 2"/>
+                        <img id="imagen3"/>
                       </div>
 
                       <div class="sesiones">
@@ -195,25 +195,24 @@
                           <button class="sesiones_boton">22:00</button>
                         </div>
                       </div>
-
                     </li>
                   </ul>
-
               </div>
-
-
-
             </div>
           </div>
-
         </div>
 
-
+        <div id="cartelera_informacion">
+          <div id="info_titulo">
+            Ver información
+          </div>
+          <div id="info_cuerpo">
+            Para ver la información sobre una de las promociones, pinche en ella.
+          </div>
+        </div>
 
       </div>
     </div>
-
-
 
   </div>
 
