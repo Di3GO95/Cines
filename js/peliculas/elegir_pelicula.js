@@ -5,9 +5,6 @@ function elegir_pelicula(nombre){
       var text = xhttp.responseText;
       var lineas = text.split("\n");
 
-      for (var i = 0; i < lineas.length; i++){
-        console.log("linea " + (i + 1) + ": " + lineas[i]);
-      }
       if (lineas.length == 7){
         var sinopsis = lineas[0];
         var titulo_original = lineas[1];

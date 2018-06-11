@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" type="text/css" href="../css/style_promociones.css">
   <script src="../js/desplegable.js" type="text/javascript"></script>
+  <script src="../js/promociones/elegir_promocion.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -18,7 +19,7 @@
       <div id="header_logo_usuario">
         <div id="header_logo" class="header_elemento">
           <a href='main.html'>
-    					<img src="../img/logo.png" height=150em width=auto alt="Logo">
+    					<img src="../img/logo.png" alt="Logo">
     				</a>
         </div>
 
@@ -92,22 +93,22 @@
           <table>
             <tr>
               <td>
-                <div class="promocion_nombre">
+                <div onclick="elegir_promocion('Mayores al cine')" class="promocion_nombre">
                   Mayores al cine
                 </div>
-                <img src="../img/promociones/mayores.jpg"</img>
+                <img onclick="elegir_promocion('Mayores al cine')" src="../img/promociones/mayores.jpg"</img>
               </td>
               <td>
-                <div class="promocion_nombre">
+                <div onclick="elegir_promocion('Pack ahorro familia')" class="promocion_nombre">
                   Pack ahorro familia
                 </div>
-                <img src="../img/promociones/familia.jpg"</img>
+                <img onclick="elegir_promocion('Pack ahorro familia')" src="../img/promociones/familia.jpg"</img>
               </td>
               <td>
-                <div class="promocion_nombre">
+                <div onclick="elegir_promocion('Si tienes un amigo, tienes un planazo')" class="promocion_nombre">
                   Si tienes un amigo, tienes un planazo
                 </div>
-                <img src="../img/promociones/amigo.jpg"</img>
+                <img onclick="elegir_promocion('Si tienes un amigo, tienes un planazo')" src="../img/promociones/amigo.jpg"</img>
               </td>
             </tr>
           </table>
@@ -116,22 +117,25 @@
 
         <div id="promocion_elegida">
           <div id="promocion_elegida_nombre">
-            Mayores al cine
+
           </div>
 
           <div id="promocion_elegida_info">
-            Ahora, todos los martes no festivos, podéis disfrutar del mejor cine sólo por 3,30 euros. Sólo tiene
-            que presentar su DNI y validar que es mayor de 65 años.
+
+          </div>
+        </div>
+
+        <div id="promocion_informacion">
+          <div class="info_titulo">
+            Ver información
+          </div>
+          <div class="info_cuerpo">
+            Para ver la información sobre una de las promociones, pinche en ella.
           </div>
         </div>
 
       </div>
     </div>
-
-
-
-
-
 
   </div>
 

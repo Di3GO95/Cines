@@ -18,7 +18,7 @@
       <div id="header_logo_usuario">
         <div id="header_logo" class="header_elemento">
           <a href='main.html'>
-    					<img src="../img/logo.png" height=150em width=auto alt="Logo">
+    					<img src="../img/logo.png" alt="Logo">
     				</a>
         </div>
 
@@ -174,12 +174,14 @@
         var i;
         var slides = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("dot");
+
         if (n > slides.length) {
           slideIndex = 1;
         }
         if (n < 1) {
           slideIndex = slides.length;
         }
+        
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
