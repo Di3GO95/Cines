@@ -1,0 +1,87 @@
+@import url("style_basic.css");
+/*
+PELICULAS
+*/
+
+.peliculas_titulo{
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  background-color: #333;
+  color: white;
+
+  font-size: 2em;
+}
+
+
+#peliculas ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#peliculas li {
+  margin-left: 2em;
+  float: left;
+  background-color: rgb(230, 230, 230);
+}
+
+#peliculas li:first-child {
+  margin-left: 12em;
+}
+
+#peliculas li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+}
+
+.lista_pelicula {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.pelicula_titulo {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-weight: bold;
+}
+
+.pelicula_imagen img {
+  height: 17.5em;
+  width: 12.5em;
+  padding-bottom: 1em;
+}
+
+/*
+PELICULA
+*/
+
+.pelicula_elemento{
+  border-bottom: 0.0625em solid rgba(0, 0, 0, 0.31);
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.ficha_tecnica_elemento{
+  text-align: left;
+}
+
+.pelicula_elemento:first-child{
+  padding-top: 0;
+}
+
+.ficha_tecnica_titulo,
+#sinopsis_titulo {
+  font-weight: bold;
+}
+
+#sinopsis_titulo{
+  margin-bottom: 0.75em;
+  font-size: 1.25em;
+}

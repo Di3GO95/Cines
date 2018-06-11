@@ -1,0 +1,164 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    DAWEB - Promociones
+  </title>
+
+  <link rel="stylesheet" type="text/css" href="../css/style_tarjeta_fidelidad.css">
+  <script src="../js/desplegable.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+  <header>
+    <div id="header">
+
+      <div id="header_logo_usuario">
+        <div id="header_logo" class="header_elemento">
+          <a href='main.html'>
+    					<img src="../img/logo.png" height=150em width=auto alt="Logo">
+    				</a>
+        </div>
+
+        <div id="header_usuario" class="header_elemento">
+          <span class="header_usuario_campo">
+
+            <div id="desplegable" class="desplegable">
+              <button onclick="desplegar()" class="header_usuario_boton">Iniciar sesión</button>
+              <div id="myDropdown" class="desplegable-contenido">
+                <form>
+                  <fieldset id="inputs">
+                    <input id="username" type="email" name="Email" placeholder="Dirección de correo" required>
+                    <input id="password" type="password" name="Password" placeholder="Contraseña" required>
+                    <input type="submit" id="submit" value="Acceder">
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+
+          </span>
+
+          <span class="header_usuario_campo">
+            <button class="header_usuario_boton"><a href='registro.php'>Registro</a></button>
+          </span>
+        </div>
+
+      </div>
+
+      <nav id="header_secciones">
+        <ul>
+          <li>
+            <a href='cines.html'>
+              Cines
+            </a>
+          </li>
+          <li>
+            <a href='peliculas.html'>
+              Peliculas
+            </a>
+          </li>
+          <li>
+            <a href='cartelera.html'>
+              Cartelera
+            </a>
+          </li>
+          <li>
+            <a href='promociones.html'>
+              Promociones
+            </a>
+          </li>
+          <li>
+            <a href='tarjeta_fidelidad.html'  class="seccion_activa">
+              Tarjeta Fidelidad
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <div id="section">
+    <div id="section_body">
+      <div id="section_body_bienvenida">
+        <h3>Aquí encontrarás toda la información relacionada con la tarjeta de fidelidad.</h3>
+      </div>
+      <div id="section_body_secciones">
+
+        <div id="fidelidad_imagen">
+          <img src="../img/main/tarjeta_fidelidad.png" alt="Tarjeta Fidelidad">
+        </div>
+
+        <div class="fidelidad_mensaje">
+          <div class="fidelidad_titulo">
+            ¿Qué es la tarjeta de fidelidad?
+          </div>
+          <div class="fidelidad_cuerpo">
+            La tarjeta de fidelidad es una tarjeta que te permite obtener ventajas y premios por tu fidelidad...¡totalmente <b>gratis!</b>
+            <br>
+            No lo dudes más, y acércate a tu cine DAWEB más cercano a pedir una tarjeta y disfrutar de todas sus ventajas.
+          </div>
+        </div>
+
+        <div class="fidelidad_mensaje">
+          <div class="fidelidad_titulo">
+            ¿Cómo se acumulan los puntos de fidelidad?
+          </div>
+          <div class="fidelidad_cuerpo">
+            ¡Es muy fácil! Por cada entrada de cine que compres, acumularás 20 puntos. Si la adquieres por internet, obtendrás 20 puntos adicionales.
+            Si además eres estudiante, obtendrás 5 puntos más.
+          </div>
+        </div>
+
+        <div class="fidelidad_mensaje">
+          <div class="fidelidad_titulo">
+            ¿Qué premios puedo conseguir?
+          </div>
+          <div class="fidelidad_cuerpo">
+            <ul>
+              <li>90 puntos - palomitas pequeñas saldas gratis o chocolatina pequeña.</li>
+              <li>110 puntos - palomitas pequeñas dulces o botella de agua.</li>
+              <li>140 puntos - 2x1 en menu mediano (refresco mediano y palomitas saladas medianas).</li>
+              <li>180 puntos -  menu pequeño gratis (palomitas + refresco).</li>
+              <li>230 puntos - 1 entrada de cine gratis de Lunes a Jueves (no válido para películas Warner y eventos o preestrenos).</li>
+              <li>260 puntos - 1 entrada de cine gratis de Lunes a Domingo (no válido para películas Warner y eventos o preestrenos).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fidelidad_mensaje">
+          <div class="fidelidad_titulo">
+            ¿Cómo se canjean los puntos de fidelidad?
+          </div>
+          <div class="fidelidad_cuerpo">
+            Dirígete a la taquilla de unos nuestros cines DAWEB y muestrales tu tarjeta DAWEB, allí podrás pedir los premios por los que canjear tus puntos.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <footer>
+    <div id="footer">
+      <div id="footer_titulo">
+        Cines DAWEB
+      </div>
+      <div id="footer_mensaje">
+        Hecho por Diego Valera Durán
+      </div>
+    </div>
+  </footer>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    DAWEB - Películas
+  </title>
+
+  <link rel="stylesheet" type="text/css" href="../css/style_peliculas.css">
+  <script src="../js/desplegable.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+  <header>
+    <div id="header">
+
+      <div id="header_logo_usuario">
+        <div id="header_logo" class="header_elemento">
+          <a href='main.html'>
+    					<img src="../img/logo.png" height=150em width=auto alt="Logo">
+    				</a>
+        </div>
+
+        <div id="header_usuario" class="header_elemento">
+          <span class="header_usuario_campo">
+
+            <div id="desplegable" class="desplegable">
+              <button onclick="desplegar()" class="header_usuario_boton">Iniciar sesión</button>
+              <div id="myDropdown" class="desplegable-contenido">
+                <form>
+                  <fieldset id="inputs">
+                    <input id="username" type="email" name="Email" placeholder="Dirección de correo" required>
+                    <input id="password" type="password" name="Password" placeholder="Contraseña" required>
+                    <input type="submit" id="submit" value="Acceder">
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+
+          </span>
+
+          <span class="header_usuario_campo">
+            <button class="header_usuario_boton"><a href='registro.php'>Registro</a></button>
+          </span>
+        </div>
+
+      </div>
+
+      <nav id="header_secciones">
+        <ul>
+          <li>
+            <a href='cines.html'>
+              Cines
+            </a>
+          </li>
+          <li>
+            <a href='peliculas.html' class="seccion_activa">
+              Peliculas
+            </a>
+          </li>
+          <li>
+            <a href='cartelera.html'>
+              Cartelera
+            </a>
+          </li>
+          <li>
+            <a href='promociones.html'>
+              Promociones
+            </a>
+          </li>
+          <li>
+            <a href='tarjeta_fidelidad.html'>
+              Tarjeta Fidelidad
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <div id="section">
+    <div id="section_body">
+      <div id="section_body_bienvenida">
+        <h3>Aquí encontrarás toda la información sobre las películas que tenemos en cartelera.</h3>
+      </div>
+      <div id="section_body_secciones">
+
+        <div id="peliculas">
+
+          <div class="peliculas_titulo">
+            Películas disponibles
+          </div>
+          <div class="peliculas_cuerpo">
+            <ul>
+              <li class="lista_pelicula">
+                <div class="pelicula_titulo">
+                  Jurassic World: El reino caído
+                </div>
+                <div class="pelicula_imagen">
+                  <img src="../img/peliculas/jurassic_world.jpg" alt="Jurassic World" />
+                </div>
+              </li>
+              <li class="lista_pelicula">
+                <div class="pelicula_titulo">
+                  Vengadores: Infinity War
+                </div>
+                <div class="pelicula_imagen">
+                  <img src="../img/peliculas/vengadores_infinity_war.jpg" alt="Vengadores Infinity War"/>
+                </div>
+              </li>
+              <li class="lista_pelicula">
+                <div class="pelicula_titulo">
+                  Deadpool 2
+                </div>
+                <div class="pelicula_imagen">
+                  <img src="../img/peliculas/deadpool_2.jpg" alt="Vengadores Infinity War"/>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="peliculas_titulo">
+            Jurassic World: El reino caído
+          </div>
+          <div id="pelicula" class="peliculas_cuerpo">
+            <div class="pelicula_elemento">
+              <div id="sinopsis_titulo">
+                Sinopsis
+              </div>
+              <div id="sinopsis_cuerpo">
+                Una erupción volcánica amenaza a los dinosaurios restantes en la Isla Nublar, donde las criaturas han vagado libremente durante años tras de la desaparición del parque temático "Jurassic World". Claire Dearing, ex gerente del parque, ahora fundó el Grupo de Protección de Dinosaurios, una organización dedicada a proteger a los dinosaurios. Para ayudar con su causa, Claire ha reclutado a Owen Grady, el ex entrenador de dinosaurios que trabajó en el parque, para evitar la extinción de los dinosaurios... Secuela de "Jurassic World" (2015), la cuarta película más taquillera de la historia del cine, y reinicio de Parque Jurásico.
+              </div>
+            </div>
+            <div class="pelicula_elemento">
+
+              <div class="ficha_tecnica_elemento">
+                <span class="ficha_tecnica_titulo">
+                  Título original:
+                </span>
+                <span class="ficha_tecnica_contenido">
+                  Jurassic World: Fallen Kingdom
+                </span>
+              </div>
+
+              <div class="ficha_tecnica_elemento">
+                <span class="ficha_tecnica_titulo">
+                  Año:
+                </span>
+                <span class="ficha_tecnica_contenido">
+                  2018
+                </span>
+              </div>
+
+              <div class="ficha_tecnica_elemento">
+                <span class="ficha_tecnica_titulo">
+                  Dirección:
+                </span>
+                <span class="ficha_tecnica_contenido">
+                  J.A. Bayona
+                </span>
+              </div>
+
+              <div class="ficha_tecnica_elemento">
+                <span class="ficha_tecnica_titulo">
+                  Reparto:
+                </span>
+                <span class="ficha_tecnica_contenido">
+                  Chris Pratt, Bryce Dallas Howard, James Cromwell, Rafe Spall, Toby Jones, Justice Smith, Daniella Pineda, Ted Levine, Geraldine Chaplin, Jeff Goldblum
+                </span>
+              </div>
+
+              <div class="ficha_tecnica_elemento">
+                <span class="ficha_tecnica_titulo">
+                  Género:
+                </span>
+                <span class="ficha_tecnica_contenido">
+                  Ciencia ficción. Aventuras
+                </span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <footer>
+    <div id="footer">
+      <div id="footer_titulo">
+        Cines DAWEB
+      </div>
+      <div id="footer_mensaje">
+        Hecho por Diego Valera Durán
+      </div>
+    </div>
+  </footer>
+
+
+
+
+</body>
+
+</html>

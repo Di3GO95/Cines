@@ -1,0 +1,239 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    DAWEB - Cartelera
+  </title>
+
+  <link rel="stylesheet" type="text/css" href="../css/style_cartelera.css">
+  <script src="../js/desplegable.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+  <header>
+    <div id="header">
+
+      <div id="header_logo_usuario">
+        <div id="header_logo" class="header_elemento">
+          <a href='main.html'>
+    					<img src="../img/logo.png" height=150em width=auto alt="Logo">
+    				</a>
+        </div>
+
+        <div id="header_usuario" class="header_elemento">
+          <span class="header_usuario_campo">
+
+            <div id="desplegable" class="desplegable">
+              <button onclick="desplegar()" class="header_usuario_boton">Iniciar sesión</button>
+              <div id="myDropdown" class="desplegable-contenido">
+                <form>
+                  <fieldset id="inputs">
+                    <input id="username" type="email" name="Email" placeholder="Dirección de correo" required>
+                    <input id="password" type="password" name="Password" placeholder="Contraseña" required>
+                    <input type="submit" id="submit" value="Acceder">
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+
+          </span>
+
+          <span class="header_usuario_campo">
+            <button class="header_usuario_boton"><a href='registro.php'>Registro</a></button>
+          </span>
+        </div>
+
+      </div>
+
+      <nav id="header_secciones">
+        <ul>
+          <li>
+            <a href='cines.html'>
+              Cines
+            </a>
+          </li>
+          <li>
+            <a href='peliculas.html'>
+              Peliculas
+            </a>
+          </li>
+          <li>
+            <a href='cartelera.html' class="seccion_activa">
+              Cartelera
+            </a>
+          </li>
+          <li>
+            <a href='promociones.html'>
+              Promociones
+            </a>
+          </li>
+          <li>
+            <a href='tarjeta_fidelidad.html'>
+              Tarjeta Fidelidad
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <div id="section">
+    <div id="section_body">
+      <div id="section_body_bienvenida">
+        <h3>Aquí encontrarás la programción de la cartelera semanal.</h3>
+      </div>
+      <div id="section_body_secciones">
+
+        <div id="section_elegir_cine">
+          <nav id="nav_cines">
+            <ul>
+              <li><a href="#">Cines<span class="caret"/></a>
+                <div>
+                  <ul>
+                    <li><a href="#">Nueva Condomina (Murcia)</a></li>
+                    <li><a href="#">La Cañada (Málaga)</a></li>
+                    <li><a href="#">Capitol (Madrid)</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+
+        <div id="section_cartelera">
+          <div id="section_cine_nombre">
+            Nueva Condomina
+          </div>
+
+          <div class="cartelera_seccion">
+            <div class="cartelera_seccion_titulo">
+              Cartelera semanal
+            </div>
+            <div class="cartelera_seccion_cuerpo">
+
+              <div id="peliculas">
+
+                  <ul>
+                    <li class="lista_pelicula">
+
+                      <div class="pelicula_titulo">
+                        Jurassic World: El reino caído
+                      </div>
+
+                      <div class="pelicula_imagen">
+                        <img src="../img/peliculas/jurassic_world.jpg" alt="Jurassic World" />
+                      </div>
+
+                      <div class="sesiones">
+                        <div class="sesiones_titulo">
+                          Sesiones:
+                        </div>
+                        <div class="sesiones_cuerpo">
+                          <button class="sesiones_boton">15:00</button>
+                          <button class="sesiones_boton">16:00</button>
+                          <button class="sesiones_boton">17:00</button>
+                          <button class="sesiones_boton">18:00</button>
+                          <button class="sesiones_boton">19:00</button>
+                          <button class="sesiones_boton">20:00</button>
+                          <button class="sesiones_boton">21:00</button>
+                          <button class="sesiones_boton">22:00</button>
+                        </div>
+                      </div>
+
+                    </li>
+                    <li class="lista_pelicula">
+                      <div class="pelicula_titulo">
+                        Vengadores: Infinity War
+                      </div>
+                      <div class="pelicula_imagen">
+                        <img src="../img/peliculas/vengadores_infinity_war.jpg" alt="Vengadores Infinity War"/>
+                      </div>
+
+                      <div class="sesiones">
+                        <div class="sesiones_titulo">
+                          Sesiones:
+                        </div>
+                        <div class="sesiones_cuerpo">
+                          <button class="sesiones_boton">15:00</button>
+                          <button class="sesiones_boton">16:00</button>
+                          <button class="sesiones_boton">17:00</button>
+                          <button class="sesiones_boton">18:00</button>
+                          <button class="sesiones_boton">19:00</button>
+                          <button class="sesiones_boton">20:00</button>
+                          <button class="sesiones_boton">21:00</button>
+                          <button class="sesiones_boton">22:00</button>
+                          <button class="sesiones_boton">23:00</button>
+                          <button class="sesiones_boton">23:45</button>
+                        </div>
+                      </div>
+
+                    </li>
+                    <li class="lista_pelicula">
+                      <div class="pelicula_titulo">
+                        Deadpool 2
+                      </div>
+                      <div class="pelicula_imagen">
+                        <img src="../img/peliculas/deadpool_2.jpg" alt="Deadpool 2"/>
+                      </div>
+
+                      <div class="sesiones">
+                        <div class="sesiones_titulo">
+                          Sesiones:
+                        </div>
+                        <div class="sesiones_cuerpo">
+                          <button class="sesiones_boton">15:00</button>
+                          <button class="sesiones_boton">16:00</button>
+                          <button class="sesiones_boton">17:00</button>
+                          <button class="sesiones_boton">18:00</button>
+                          <button class="sesiones_boton">19:00</button>
+                          <button class="sesiones_boton">20:00</button>
+                          <button class="sesiones_boton">21:00</button>
+                          <button class="sesiones_boton">22:00</button>
+                        </div>
+                      </div>
+
+                    </li>
+                  </ul>
+
+              </div>
+
+
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+
+  <footer>
+    <div id="footer">
+      <div id="footer_titulo">
+        Cines DAWEB
+      </div>
+      <div id="footer_mensaje">
+        Hecho por Diego Valera Durán
+      </div>
+    </div>
+  </footer>
+
+
+
+
+</body>
+
+</html>

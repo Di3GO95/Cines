@@ -1,0 +1,37 @@
+@import url("style_basic.css");
+
+#fidelidad_imagen img {
+  height: 28.125em;
+  width: auto;
+}
+
+.fidelidad_titulo{
+  font-size: 2em;
+  background-color: #333;
+  color: white;
+}
+
+.fidelidad_titulo,
+.fidelidad_cuerpo{
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.fidelidad_mensaje{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.fidelidad_mensaje:last-child{
+  padding-bottom: 1em;
+}
+
+.fidelidad_cuerpo{
+  font-size: 1.5em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.fidelidad_cuerpo li{
+  text-align: left;
+}

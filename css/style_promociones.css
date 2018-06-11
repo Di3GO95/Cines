@@ -1,0 +1,44 @@
+@import url("style_basic.css");
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border: 0.0625em solid #dddddd;
+    text-align: center;
+    width: 33.33333333%;
+}
+
+td img,
+.promocion_nombre{
+  cursor: pointer;
+}
+
+td img{
+  width: 12.5em;
+  height: 12.5em;
+}
+
+.promocion_nombre{
+  font-weight: bold;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  background-color: rgb(215, 215, 215);
+}
+
+#promocion_elegida_nombre{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 2em;
+  background-color: #333;
+  color: white;
+}
+
+#promocion_elegida_info{
+  padding-bottom: 2em;
+  font-size: 1.5em;
+  margin: 2em;
+}

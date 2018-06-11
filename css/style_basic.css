@@ -1,0 +1,172 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body, html{
+  width:100%;
+  height:100%;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+CABECERA -> LOGO Y USUARIO
+*/
+
+#header_logo_usuario{
+  padding-left: 35%;
+}
+
+.header_elemento{
+  padding-left: 5%;
+}
+
+.header_elemento:first-child{
+  padding-left: 0%;
+}
+
+#header_logo{
+  vertical-align:middle;
+  display:inline-block;
+}
+
+#header_usuario{
+  vertical-align:middle;
+  display:inline-block;
+  font-size: 2em;
+}
+
+.header_usuario_campo{
+  margin-left: 0.5em;
+}
+
+.header_usuario_campo:last-child{
+  border-right: none;
+}
+
+#header_secciones{
+  clear:both;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+.header_usuario_boton {
+    background-color: #3498DB;
+    color: white;
+    padding: 1em;
+    font-size: 0.5em;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5em;
+}
+
+.header_usuario_boton:hover, .header_usuario_boton:focus {
+    background-color: #2980B9;
+}
+
+.desplegable {
+    position: relative;
+    display: inline-block;
+}
+
+.desplegable-contenido {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 10em;
+    overflow: auto;
+    box-shadow: 0em 0.2em 0.4em 0em rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.show {display:block;}
+
+
+/*
+CABECERA -> SECCIONES
+*/
+
+nav#header_secciones ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align: center;
+}
+
+nav#header_secciones ul li {
+    display: inline-block;
+}
+
+nav#header_secciones ul li a {
+    display: block;
+    text-align: center;
+    padding: 0.875em 1em;
+    text-decoration: none;
+}
+
+nav#header_secciones ul li a.seccion_activa,
+nav#header_secciones ul li a:hover {
+    background-color: #3498DB;
+}
+
+
+/*
+CUERPO
+*/
+
+#section {
+  clear: both;
+	width: 100%;
+  height: auto;
+  background-image: url('https://wallpaperstock.net/wallpapers/thumbs/49297hd.jpg');
+
+  border-bottom: 1px solid black;
+
+  min-height: 80%;
+}
+
+#section_body{
+  margin-left: 20%;
+  width: 60%;
+
+  text-align: center;
+
+  background-color: white;
+}
+
+#section_body_bienvenida{
+  padding-bottom: 2%;
+}
+
+#section_body_cartelera h1{
+  background-color: #333;
+  color: white;
+}
+
+
+
+/*
+PIE DE PÁGINA
+*/
+
+#footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 6em;
+   background-color: white;
+   padding-top: 1em;
+   color: black;
+   font-weight: bold;
+   text-align: center;
+}
+
+#footer_titulo{
+  color: #3498DB;
+  font-size: 2em;
+}
