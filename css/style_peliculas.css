@@ -31,14 +31,6 @@ PELICULAS
   margin-left: 12em;
 }
 
-#peliculas li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 1em;
-  text-decoration: none;
-}
-
 .lista_pelicula {
   padding-left: 1em;
   padding-right: 1em;
