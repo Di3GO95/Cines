@@ -1,0 +1,96 @@
+@import url("style_basic.css");
+
+#registro {
+    border-radius: 0.3125em;
+    margin-left: 20%;
+    width: 60%;
+    padding-bottom: 0.5em;
+}
+
+#registro_interno{
+  background-color: #f2f2f2;
+}
+
+#registro h1,
+.valida{
+  background-color: #3498DB;
+  color: white;
+  width: 100%;
+  font-weight: bold;
+  font-size: 2em;
+
+  padding-top: 0.275em;
+  padding-bottom: 0.275em;
+}
+
+#registro h1{
+            border-top-left-radius: 0.25em;
+        -moz-border-top-left-radius:0.25em;
+     -webkit-border-top-left-radius:0.25em;
+
+           border-top-right-radius: 0.25em;
+       -moz-border-top-right-radius:0.25em;
+    -webkit-border-top-right-radius:0.25em;
+}
+
+input {
+    width: 60%;
+    padding: 0.75em 1.1em;
+    margin: 0.5em 0;
+    margin-left: 20%;
+    display: block;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.25em;
+    box-sizing: border-box;
+}
+
+.valida {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    border: none;
+    cursor: pointer;
+
+    border-bottom-left-radius: 0.25em;
+    -moz-border-bottom-left-radius:0.25em;
+    -webkit-border-bottom-left-radius:0.25em;
+
+       border-bottom-right-radius: 0.25em;
+    -moz-border-bottom-right-radius:0.25em;
+    -webkit-border-bottom-right-radius:0.25em;
+}
+
+.valida:hover {
+    background-color: #2980B9;
+}
+
+.valida img{
+  width: 4%;
+  height: auto;
+  display: none;
+}
+
+#resultado{
+  padding-bottom: 1em;
+}
+
+#boton_resultado{
+  width: 60%;
+  background-color: #3498DB;
+  color:white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+
+  display: none;
+}
+
+.validacion{
+  color:red;
+  text-align: left;
+  padding-left: 20%;
+  padding-bottom: 0.5em;
+
+  font-weight: bold;
+
+  display: none;
+}

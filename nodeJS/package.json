@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-mysql-login-signup-and-tarjetas",
+  "version": "1.0.0",
+  "description": "Server que permite acceder a una bbdd MySQL para registrar usuarios, hacer posteriormente login, y registrar tarjetas de fidelidad",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mysql"
+  ],
+  "author": "Diego Valera Duran",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0"
+  }
+}
