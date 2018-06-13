@@ -1,0 +1,19 @@
+<div id="registro_tf_registro">
+  <div id="registro_tf_registro_interno">
+    <h1>Puntos de tu tarjeta de fidelidad</h1>
+    <div id="info_tf">
+      <div id="info_puntos">
+        Tienes
+        <div id="registro_tf_puntos">
+          5
+        </div>
+        puntos de fidelidad.
+      </div>
+      <br><br>
+      Recuerda que hay muchas maneras de conseguir
+      puntos y así obtener grandes descuentos y ventajas.
+      <br><br>
+      Pinche <a target="_blank" href="./tarjeta_fidelidad.html">aquí</a> para leer más información.
+    </div>
+  </div>
+</div>

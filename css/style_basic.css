@@ -88,24 +88,30 @@ CABECERA -> LOGO Y USUARIO
 }
 
 
-#login{
+#cabecera_usuario_login{
   padding-left: 2em;
   padding-top: 0.5em;
 }
 
-.validacion{
+.cabecera_validacion{
   color:red;
   text-align: left;
-  padding-left: 2%;
   padding-bottom: 0.5em;
 
   font-weight: bold;
   font-size: 0.5em;
 
+  max-width: 65%;
+
   display: none;
 }
 
-.valida{
+#acceder_validacion{
+  text-align: center;
+  margin-right: 4%;
+}
+
+.cabecera_usuario_valida{
   background-color: #3498DB;
   width: 68%;
   text-align: center;
@@ -118,11 +124,7 @@ CABECERA -> LOGO Y USUARIO
   -webkit-border-radiuss:0.25em;
 }
 
-#acceder_validacion{
-  margin-right: 4%;
-}
-
-.valida img{
+.cabecera_usuario_valida img{
   width: 10%;
   height: auto;
   display: none;
@@ -136,6 +138,14 @@ CABECERA -> LOGO Y USUARIO
 
 #boton_desconectarse{
   margin: auto;
+}
+
+#cabecera_acceder_validacion{
+  text-align: center;
+}
+
+.cabecera_botones_usuario_logueado{
+  display: inline-block;
 }
 
 
@@ -180,7 +190,7 @@ CUERPO
   height: auto;
   background-image: url('https://wallpaperstock.net/wallpapers/thumbs/49297hd.jpg');
 
-  border-bottom: 1px solid black;
+  border-bottom: 0.10em solid black;
 
   min-height: 80%;
 }

@@ -108,6 +108,82 @@ app.post('/login', function (peticion, respuesta){
 });
 
 
+app.post('/registro_tf', function (peticion, respuesta){
+                var correo = peticion.body.correo;
+                console.log("Correo que se intenta añadir: " + correo);
+                var status = 0;
+                var mensaje = "";
+
+                var sql = "INSERT INTO tarjetas_fidelidad (correo) VALUES ('" + correo + "')";
+                con.query(sql, function (err, result) {
+                  if (err){
+                    switch (err.code) {
+                      case 'ER_DUP_ENTRY':
+                        status = 409;
+                        mensaje = "Ya existe una tarjeta asociada al correo";
+                        break;
+                      case 'ECONNREFUSED':
+                        status = 503;
+                        mensaje = "La base de datos no está disponible";
+                        break;
+                      default:
+                        status = 500;
+                        mensaje = "Error interno en la base de datos";
+                        break;
+                    }
+                  }else{
+                    status = 200;
+                    mensaje = "Tarjeta registrada correctamente";
+                  }
+                  console.log("Intento de registro de tarjeta: statusCode: " + status + ", mensaje: " + mensaje);
+                  respuesta.status(status);
+                  respuesta.send(mensaje);
+                })
+
+});
+
+app.get('/tarjeta_fidelidad/', function (peticion, respuesta){
+    var correo = peticion.query.correo;
+    console.log("TF que se intenta ver: " + correo);
+    var status = 0;
+    var mensaje = "";
+
+    var sql = "SELECT * FROM tarjetas_fidelidad WHERE correo = " + mysql.escape(correo);
+
+    con.query(sql, function (err, result) {
+      if (err){
+        console.log("err code: " + err.code);
+        switch (err.code) {
+          case 'ECONNREFUSED':
+            status = 503;
+            mensaje = "La base de datos no está disponible";
+            break;
+          default:
+            status = 500;
+            mensaje = "Error interno en la base de datos";
+            break;
+        }
+      }else{
+        // el usuario no existe
+        console.log("No hay error, result, length: " + result.length);
+        console.log("contenido de result: " + result);
+        if (result.length != 1){
+          status = 401;
+          mensaje = "El correo no existe";
+        }else{
+          // login correcto
+          status = 200;
+          mensaje = result[0].puntos;
+        }
+      }
+      console.log("Intento de tf de usuario: statusCode: " + status + ", mensaje: " + mensaje);
+      respuesta.status(status);
+      respuesta.send(mensaje.toString());
+    })
+});
+
+
+
 var server = app.listen(3000, function(){
               console.log('Servidor web iniciado en el puerto 3000');
             });

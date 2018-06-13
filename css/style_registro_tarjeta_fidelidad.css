@@ -1,18 +1,18 @@
 @import url("style_basic.css");
 
-#registro {
+#registro_tf_registro {
     border-radius: 0.3125em;
     margin-left: 20%;
     width: 60%;
     padding-bottom: 0.5em;
 }
 
-#registro_interno{
+#registro_tf_registro_interno{
   background-color: #f2f2f2;
 }
 
-#registro h1,
-.valida{
+#registro_tf_registro h1,
+.registro_tf_valida{
   background-color: #3498DB;
   color: white;
   width: 100%;
@@ -23,7 +23,7 @@
   padding-bottom: 0.275em;
 }
 
-#registro h1{
+#registro_tf_registro h1{
             border-top-left-radius: 0.25em;
         -moz-border-top-left-radius:0.25em;
      -webkit-border-top-left-radius:0.25em;
@@ -33,19 +33,17 @@
     -webkit-border-top-right-radius:0.25em;
 }
 
-#registro input {
-    width: 60%;
-    padding: 0.75em 1.1em;
-    margin: 0.5em 0;
-    margin-left: 20%;
-    display: block;
-    border: 0.0625em solid #ccc;
-    border-radius: 0.25em;
-    box-sizing: border-box;
+#info_tf{
+  padding-bottom: 1em;
 }
 
-.valida {
-    margin-top: 0.8em;
+#info_tf a{
+  color: black;
+  font-weight: bold;
+}
+
+.registro_tf_valida {
+    margin-top: 0.3em;
     margin-bottom: 0.8em;
     border: none;
     cursor: pointer;
@@ -59,21 +57,21 @@
     -webkit-border-bottom-right-radius:0.25em;
 }
 
-.valida:hover {
+.registro_tf_valida:hover {
     background-color: #2980B9;
 }
 
-.valida img{
-  width: 6%;
+.registro_tf_valida img{
+  width: 4%;
   height: auto;
   display: none;
 }
 
-#registro_resultado{
+#registro_tf_resultado{
   padding-bottom: 1em;
 }
 
-#registro_resultado_interno{
+#registro_tf_boton_resultado{
   width: 60%;
   background-color: #3498DB;
   color:white;
@@ -82,20 +80,18 @@
   text-align: center;
   margin-left: 20%;
 
-  display: none;
-
   border-radius: 0.25em;
   -moz-border-radius:0.25em;
   -webkit-border-radius:0.25em;
-}
-
-.registro_validacion{
-  color:red;
-  text-align: left;
-  padding-left: 20%;
-  padding-bottom: 0.5em;
-
-  font-weight: bold;
 
   display: none;
+}
+
+#registro_tf_puntos{
+  font-weight: bold;
+}
+
+#info_puntos{
+  background-color: #333;
+  color: white;
 }

@@ -1,0 +1,22 @@
+<div id="registro_tf_registro">
+  <div id="registro_tf_registro_interno">
+    <h1>¡Registra tu tarjeta de fidelidad!</h1>
+    <div id="info_tf">
+      La tarjeta de fidelidad es una tarjeta que te permite obtener ventajas y premios por tu fidelidad...¡totalmente gratis!
+      No lo dudes más, y acércate a tu cine DAWEB más cercano a pedir una tarjeta y disfrutar de todas sus ventajas.
+      <br><br>
+      Pinche <a target="_blank" href="./tarjeta_fidelidad.html">aquí</a> para leer más información.
+    </div>
+
+    <div class="registro_tf_valida" onclick="registrar_tf()" >
+      Registro
+      <img id="registro_tf_cargando" src="../img/cargando.gif"/>
+    </div>
+  </div>
+</div>
+
+<div id="registro_tf_resultado">
+  <div id="registro_tf_boton_resultado">
+
+  </div>
+</div>

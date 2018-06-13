@@ -2,19 +2,19 @@
   <div id="desplegable" class="desplegable">
     <button onclick="desplegar()" class="header_usuario_boton">Iniciar sesión</button>
     <div id="myDropdown" class="desplegable-contenido">
-      <div id = "login">
+      <div id = "cabecera_usuario_login">
         <form>
           <input id="correo" type="email" name="correo" placeholder="Dirección de correo">
-          <div class="validacion" id="correo_validacion">correo</div>
+          <div class="cabecera_validacion" id="cabecera_correo_validacion"></div>
 
           <input id="pass" type="password" name="pass" placeholder="Contraseña">
-          <div class="validacion" id="pass_validacion">pass</div>
+          <div class="cabecera_validacion" id="cabecera_pass_validacion"></div>
 
-          <div class="valida" onclick="valida()" >
+          <div class="cabecera_usuario_valida" onclick="login_valida()" >
             Acceder
             <img id="cargando" src="../img/cargando.gif"/>
           </div>
-          <div class="validacion" id="acceder_validacion"></div>
+          <div class="cabecera_validacion" id="cabecera_acceder_validacion"></div>
         </form>
       </div>
     </div>

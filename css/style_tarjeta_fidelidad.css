@@ -1,8 +1,8 @@
 @import url("style_basic.css");
 
 #fidelidad_imagen img {
-  height: 28.125em;
-  width: auto;
+  width: 80%;
+  height: auto;
 }
 
 .fidelidad_titulo{

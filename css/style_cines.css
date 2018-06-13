@@ -137,7 +137,7 @@ CINE
 
 .cine_seccion img.fotografia{
   width: 80%;
-  height: 20em;
+  height: auto;
 }
 
 .cine_seccion img.maps{

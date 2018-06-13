@@ -2,7 +2,18 @@
   <div id = "nombre_usuario">
 
   </div>
-  <div id = "boton_desconectarse">
-    <input class="header_usuario_boton" type="button" value="Desconectarse" onclick="logout()"/>
+
+  <div class="cabecera_botones_usuario_logueado">
+    <div id = "boton_tarjeta_fidelidad">
+      <a href="./registro_tarjeta_fidelidad.html">
+        <input class="header_usuario_boton" type="button" value="Mi tarjeta"/>
+      </a>
+    </div>
+  </div>
+
+  <div class="cabecera_botones_usuario_logueado">
+    <div id = "boton_desconectarse">
+      <input class="header_usuario_boton" type="button" value="Desconectarse" onclick="logout()"/>
+    </div>
   </div>
 </div>

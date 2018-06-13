@@ -1,8 +1,8 @@
-function valida() {
+function registro_de_usuario() {
   var hay_error = comprobar_campos();
 
   if (!hay_error){
-    document.getElementById("cargando").style['display'] = 'inline';
+    document.getElementById("registro_cargando").style['display'] = 'inline';
     registrar_usuario();
   }
 }
@@ -17,11 +17,11 @@ function comprobar_campos(){
 }
 
 function comprobar_nombre(){
-  var elem_nombre = document.getElementById("nombre");
+  var elem_nombre = document.getElementById("registro_nombre");
   var elem_nombre_validacion = document.getElementById("nombre_validacion");
 
   elem_nombre_validacion.style['display'] = 'none';
-
+  console.log("comprobar nombre: " + elem_nombre.value);
   if (elem_nombre.value == ""){
     elem_nombre_validacion.style['display'] = 'inherit';
     elem_nombre_validacion.innerHTML = "El nombre es obligatorio";
@@ -40,11 +40,12 @@ function comprobar_nombre(){
 }
 
 function comprobar_correo(){
-  var elem_correo = document.getElementById("correo");
+  var elem_correo = document.getElementById("registro_correo");
   var elem_correo_validacion = document.getElementById("correo_validacion");
 
   elem_correo_validacion.style['display'] = 'none';
 
+  console.log("comprobar elem_correo: " + elem_correo.value);
   if (elem_correo.value == ""){
     elem_correo_validacion.style['display'] = 'inherit';
     elem_correo_validacion.innerHTML = "El correo es obligatorio";
@@ -63,11 +64,12 @@ function comprobar_correo(){
 }
 
 function comprobar_pass(){
-  var elem_pass = document.getElementById("pass");
+  var elem_pass = document.getElementById("registro_pass");
   var elem_pass_validacion = document.getElementById("pass_validacion");
 
   elem_pass_validacion.style['display'] = 'none';
 
+  console.log("comprobar elem_pass: " + elem_pass.value);
   if (elem_pass.value == ""){
     elem_pass_validacion.style['display'] = 'inherit';
     elem_pass_validacion.innerHTML = "La contraseña es obligatoria";
@@ -86,11 +88,12 @@ function comprobar_pass(){
 }
 
 function comprobar_pass2(){
-  var elem_pass2 = document.getElementById("pass2");
+  var elem_pass2 = document.getElementById("registro_pass2");
   var elem_pass2_validacion = document.getElementById("pass2_validacion");
 
   elem_pass2_validacion.style['display'] = 'none';
 
+  console.log("comprobar elem_pass2: " + elem_pass2.value);
   if (elem_pass2.value == ""){
     elem_pass2_validacion.style['display'] = 'inherit';
     elem_pass2_validacion.innerHTML = "La contraseña es obligatoria";
@@ -98,7 +101,7 @@ function comprobar_pass2(){
     return true;
   }
 
-  var elem_pass = document.getElementById("pass");
+  var elem_pass = document.getElementById("registro_pass");
   if (elem_pass.value != elem_pass2.value){
     elem_pass2_validacion.style['display'] = 'inherit';
     elem_pass2_validacion.innerHTML = "Las contraseñas deben ser iguales";
@@ -120,6 +123,7 @@ REGISTRO DE USUARIO
 
 
 function registrar_usuario(){
+  console.log("registrando usuario");
   peticion_http = inicializa_xhr();
   if (peticion_http) {
     peticion_http.onreadystatechange = procesaRespuesta;
@@ -141,9 +145,9 @@ function inicializa_xhr(){
 }
 
 function crea_query_string() {
-  var correo = document.getElementById("correo");
-  var pass = document.getElementById("pass");
-  var nombre = document.getElementById("nombre");
+  var correo = document.getElementById("registro_correo");
+  var pass = document.getElementById("registro_pass");
+  var nombre = document.getElementById("registro_nombre");
 
   return "correo=" + encodeURIComponent(correo.value) +
          "&pass=" + encodeURIComponent(pass.value) +
@@ -169,10 +173,10 @@ function procesaRespuesta() {
     if (peticion_http.status == 0)
       mensaje = "Error al conectar con el servidor";
 
-    document.getElementById("boton_resultado").value = mensaje;
-    document.getElementById("boton_resultado").style['background-color'] = color;
-    document.getElementById("boton_resultado").style['display'] = "inherit";
+    document.getElementById("registro_resultado_interno").innerHTML = mensaje;
+    document.getElementById("registro_resultado_interno").style['background-color'] = color;
+    document.getElementById("registro_resultado_interno").style['display'] = "inherit";
 
-    document.getElementById("cargando").style['display'] = 'none';
+    document.getElementById("registro_cargando").style['display'] = 'none';
   }
 }
