@@ -61,6 +61,52 @@ app.post('/registro', function (peticion, respuesta){
 
 });
 
+app.post('/login', function (peticion, respuesta){
+                var correo = peticion.body.correo;
+                var pass = peticion.body.pass;
+
+                var status = 0;
+                var mensaje = "";
+
+                var sql = "SELECT * FROM usuarios WHERE correo = " + mysql.escape(correo);
+                con.query(sql, function (err, result) {
+                  if (err){
+                    console.log("err code: " + err.code);
+                    switch (err.code) {
+                      case 'ECONNREFUSED':
+                        status = 503;
+                        mensaje = "La base de datos no está disponible";
+                        break;
+                      default:
+                        status = 500;
+                        mensaje = "Error interno en la base de datos";
+                        break;
+                    }
+                  }else{
+                    // el usuario no existe
+                    console.log("No hay error, result, length: " + result.length);
+                    console.log("contenido de result: " + result);
+                    if (result.length != 1){
+                      status = 401;
+                      mensaje = "El correo no existe";
+                    }else{
+                      // 401 fail login
+                      if (result[0].pass != pass){
+                        status = 401;
+                        mensaje = "Contraseña incorrecta";
+                      }else{// login correcto
+                        status = 200;
+                        mensaje = result[0].nombre;
+                      }
+                    }
+                  }
+                  console.log("Intento de login de usuario: statusCode: " + status + ", mensaje: " + mensaje);
+                  respuesta.status(status);
+                  respuesta.send(mensaje);
+                })
+
+});
+
 
 var server = app.listen(3000, function(){
               console.log('Servidor web iniciado en el puerto 3000');

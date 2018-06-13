@@ -33,7 +33,7 @@ CABECERA -> LOGO Y USUARIO
 
 #header_logo img{
   height:9.5em;
-  width=auto;
+  width:auto;
 }
 
 #header_usuario{
@@ -87,7 +87,57 @@ CABECERA -> LOGO Y USUARIO
     z-index: 1;
 }
 
+
+#login{
+  padding-left: 2em;
+  padding-top: 0.5em;
+}
+
+.validacion{
+  color:red;
+  text-align: left;
+  padding-left: 2%;
+  padding-bottom: 0.5em;
+
+  font-weight: bold;
+  font-size: 0.5em;
+
+  display: none;
+}
+
+.valida{
+  background-color: #3498DB;
+  width: 68%;
+  text-align: center;
+  color: white;
+  font-size: 0.8em;
+  cursor: pointer;
+
+  border-radius: 0.25em;
+  -moz-border-radius:0.25em;
+  -webkit-border-radiuss:0.25em;
+}
+
+#acceder_validacion{
+  margin-right: 4%;
+}
+
+.valida img{
+  width: 10%;
+  height: auto;
+  display: none;
+}
+
 .show {display:block;}
+
+#info_usuario_logueado{
+  text-align: center;
+}
+
+#boton_desconectarse{
+  margin: auto;
+}
+
 
 
 /*

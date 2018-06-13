@@ -6,7 +6,9 @@ function desplegar() {
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
-  if (!document.getElementById('desplegable').contains(event.target)){
+  var despl = (document.getElementById('desplegable'))
+
+  if (despl != null && !despl.contains(event.target)){
     var dropdowns = document.getElementsByClassName("desplegable-contenido");
     var i;
     for (i = 0; i < dropdowns.length; i++) {

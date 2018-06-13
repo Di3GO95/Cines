@@ -1,0 +1,27 @@
+<span class="header_usuario_campo">
+  <div id="desplegable" class="desplegable">
+    <button onclick="desplegar()" class="header_usuario_boton">Iniciar sesión</button>
+    <div id="myDropdown" class="desplegable-contenido">
+      <div id = "login">
+        <form>
+          <input id="correo" type="email" name="correo" placeholder="Dirección de correo">
+          <div class="validacion" id="correo_validacion">correo</div>
+
+          <input id="pass" type="password" name="pass" placeholder="Contraseña">
+          <div class="validacion" id="pass_validacion">pass</div>
+
+          <div class="valida" onclick="valida()" >
+            Acceder
+            <img id="cargando" src="../img/cargando.gif"/>
+          </div>
+          <div class="validacion" id="acceder_validacion"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</span>
+
+<span class="header_usuario_campo">
+  <button class="header_usuario_boton"><a href='registro.html'>Registro</a></button>
+</span>
