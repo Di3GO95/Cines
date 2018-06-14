@@ -5,7 +5,7 @@
       <div id="info_puntos">
         Tienes
         <div id="registro_tf_puntos">
-          5
+          0
         </div>
         puntos de fidelidad.
       </div>

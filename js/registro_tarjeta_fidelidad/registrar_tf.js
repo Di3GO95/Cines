@@ -39,7 +39,7 @@ function registrar_tf_get_cookie(cname) {
 
 function registrar_tf_crea_query_string() {
   var correo = registrar_tf_get_cookie("correo_logueado");
-  
+
   return "correo=" + encodeURIComponent(correo) +
          "&nocache=" + Math.random();
 }

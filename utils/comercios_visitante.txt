@@ -1,0 +1,36 @@
+<div class="comercios_seccion">
+  <div class="comercios_seccion_titulo">
+    Lista de comercios
+  </div>
+
+  <nav id="nav_cines">
+    <ul>
+      <li><a href="#"><span id="comercios_cine_elegido_lista">Cines</span><span class="caret"/></a>
+        <span>
+          <img id="listado_comercios_cargando" src="../img/cargando.gif"/>
+        </span>
+        <div>
+          <ul>
+            <li><a onclick="comercios_elegir_cine_lista('Nueva Condomina (Murcia)')" href="#">Nueva Condomina (Murcia)</a></li>
+            <li><a onclick="comercios_elegir_cine_lista('La Cañada (Málaga)')" href="#">La Cañada (Málaga)</a></li>
+            <li><a onclick="comercios_elegir_cine_lista('Capitol (Madrid)')" href="#">Capitol (Madrid)</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="comercios_lista_comercios" class="comercios_seccion_cuerpo">
+    <div class="comercios_seccion_cuerpo_comercio">
+      Comercio
+    </div>
+
+    <div class="comercios_seccion_cuerpo_comercio">
+      Comercio
+    </div>
+
+    <div class="comercios_seccion_cuerpo_comercio">
+      Comercio
+    </div>
+  </div>
+</div>

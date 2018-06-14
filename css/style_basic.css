@@ -174,9 +174,11 @@ nav#header_secciones ul li a {
     text-decoration: none;
 }
 
-nav#header_secciones ul li a.seccion_activa,
-nav#header_secciones ul li a:hover {
+nav#header_secciones ul li a.seccion_activa{
     background-color: #3498DB;
+}
+nav#header_secciones ul li a:hover{
+    background-color: #2980B9
 }
 
 

@@ -11,6 +11,11 @@ cambiando según el usuario está logueado o no.
 
 Cuando un usuario registrado accede a su tarjeta de fidelidad, esta página
 cambia según si el usuario haya registrado o no una tarjeta de fidelidad.
+
+3.- Comercios
+
+Al igual que con la tarjeta de fidelidad, la página cambia según el usuario esté
+logueado o no.
 */
 
 window.onload = function conf_inicial(){
@@ -27,6 +32,15 @@ window.onload = function conf_inicial(){
   var urlActual = window.location.pathname;
   if (urlActual.indexOf(url_registro_tf) != -1)
     cuerpo_tf_mostrar_cuerpo();
+
+  /*
+  3.- Comercios
+  Solo se llamará a esta función cuando estemos en la página correspondiente
+  */
+  var url_comercios = "comercios.html";
+  var urlActual = window.location.pathname;
+  if (urlActual.indexOf(url_comercios) != -1)
+    conf_inicial_registro_comercios();
 }
 
 
@@ -196,4 +210,35 @@ function cuerpo_tf_inicializa_xhr(){
   else if(window.ActiveXObject) {
     return new ActiveXObject("Microsoft.XMLHTTP");
   }
+}
+
+
+
+/************************************
+*************************************
+*************************************
+3.- Comercios
+*************************************
+*************************************
+************************************/
+
+function conf_inicial_registro_comercios(){
+  var fichero = "";
+  if (is_usuario_logueado()){
+    fichero = "../utils/comercios_usuario_logueado.txt";
+  }else{
+    fichero = "../utils/comercios_visitante.txt";
+  }
+
+  var xhttp = inicializa_xhr();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("section_body_secciones").innerHTML =
+        this.responseText;
+    }
+  };
+
+  xhttp.open("GET", fichero, true);
+  xhttp.send();
+
 }
