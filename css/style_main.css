@@ -66,10 +66,32 @@ CUERPO -> DIAPOSITIVAS
 /* Fading animation */
 
 #slideshow .fade {
+  -o-animation-name: fade;
+  -o-animation-duration: 1.5s;
+  -moz-animation-name: fade;
+  -moz-animation-duration: 1.5s;
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+}
+
+@-o-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@-moz-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
 }
 
 @-webkit-keyframes fade {

@@ -23,5 +23,7 @@
 </span>
 
 <span class="header_usuario_campo">
-  <button class="header_usuario_boton"><a href='registro.html'>Registro</a></button>
+  <a href='registro.html'>
+    <button class="header_usuario_boton">Registro</button>
+  </a>
 </span>
