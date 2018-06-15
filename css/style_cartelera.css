@@ -75,7 +75,7 @@ nav#nav_cines > ul > li > div {
   margin: 0;
   opacity: 0;
   position: absolute;
-  width: 23.8%;
+  width: 24%;
   visibility: hidden;
   z-index: 100;
   -webkit-transiton: opacity 0.2s;
@@ -115,7 +115,7 @@ INFORMACION DE CADA CINE
 #section_cine_nombre{
   background-color: #3498DB;
   color: white;
-  height: 2em;
+  
   line-height: 2em;
   font-size: 2em;
 }
@@ -211,4 +211,10 @@ CADA PELICULA
 #info_cuerpo{
   font-size: 1.5em;
   padding-bottom: 0.5em;
+}
+
+@media screen and (max-width:800px) {
+  nav#nav_cines > ul > li > div{
+    width: 40%;
+  }
 }

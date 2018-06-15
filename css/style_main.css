@@ -11,7 +11,7 @@ CUERPO -> DIAPOSITIVAS
 #slideshow img {
   vertical-align: middle;
   width: 100%;
-  height: 25em;
+  max-height: 25em;
 }
 
 /* Slideshow container */
@@ -137,4 +137,10 @@ h1{
   height: 17.5em;
   width: 12.5em;
   padding-bottom: 1em;
+}
+
+@media screen and (max-width:500px){
+  .peliculas_cuerpo li:first-child{
+    margin-left: 1em;
+  }
 }

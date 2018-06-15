@@ -184,3 +184,9 @@ nav#nav_cines > ul > li:hover > div {
 .comercios_seccion_cuerpo_comercio:last-child{
   border-bottom: none;
 }
+
+@media screen and (max-width:800px) {
+  nav#nav_cines > ul > li > div{
+    width: 40%;
+  }
+}

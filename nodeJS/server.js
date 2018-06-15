@@ -55,6 +55,7 @@ app.post('/registro', function (peticion, respuesta){
                     mensaje = "Usuario registrado correctamente";
                   }
                   console.log("Intento de registro de usuario: statusCode: " + status + ", mensaje: " + mensaje);
+                  console.log("\n");
                   respuesta.status(status);
                   respuesta.send(mensaje);
                 })
@@ -71,7 +72,6 @@ app.post('/login', function (peticion, respuesta){
                 var sql = "SELECT * FROM usuarios WHERE correo = " + mysql.escape(correo);
                 con.query(sql, function (err, result) {
                   if (err){
-                    console.log("err code: " + err.code);
                     switch (err.code) {
                       case 'ECONNREFUSED':
                         status = 503;
@@ -84,8 +84,6 @@ app.post('/login', function (peticion, respuesta){
                     }
                   }else{
                     // el usuario no existe
-                    console.log("No hay error, result, length: " + result.length);
-                    console.log("contenido de result: " + result);
                     if (result.length != 1){
                       status = 401;
                       mensaje = "El correo no existe";
@@ -101,6 +99,7 @@ app.post('/login', function (peticion, respuesta){
                     }
                   }
                   console.log("Intento de login de usuario: statusCode: " + status + ", mensaje: " + mensaje);
+                  console.log("\n");
                   respuesta.status(status);
                   respuesta.send(mensaje);
                 })
@@ -110,7 +109,6 @@ app.post('/login', function (peticion, respuesta){
 
 app.post('/registro_tf', function (peticion, respuesta){
                 var correo = peticion.body.correo;
-                console.log("Correo que se intenta añadir: " + correo);
                 var status = 0;
                 var mensaje = "";
 
@@ -136,6 +134,7 @@ app.post('/registro_tf', function (peticion, respuesta){
                     mensaje = "Tarjeta registrada correctamente";
                   }
                   console.log("Intento de registro de tarjeta: statusCode: " + status + ", mensaje: " + mensaje);
+                  console.log("\n");
                   respuesta.status(status);
                   respuesta.send(mensaje);
                 })
@@ -144,7 +143,6 @@ app.post('/registro_tf', function (peticion, respuesta){
 
 app.get('/tarjeta_fidelidad/', function (peticion, respuesta){
     var correo = peticion.query.correo;
-    console.log("TF que se intenta ver: " + correo);
     var status = 0;
     var mensaje = "";
 
@@ -152,7 +150,6 @@ app.get('/tarjeta_fidelidad/', function (peticion, respuesta){
 
     con.query(sql, function (err, result) {
       if (err){
-        console.log("err code: " + err.code);
         switch (err.code) {
           case 'ECONNREFUSED':
             status = 503;
@@ -165,8 +162,6 @@ app.get('/tarjeta_fidelidad/', function (peticion, respuesta){
         }
       }else{
         // el usuario no existe
-        console.log("No hay error, result, length: " + result.length);
-        console.log("contenido de result: " + result);
         if (result.length != 1){
           status = 401;
           mensaje = "El correo no existe";
@@ -177,6 +172,7 @@ app.get('/tarjeta_fidelidad/', function (peticion, respuesta){
         }
       }
       console.log("Intento de tf de usuario: statusCode: " + status + ", mensaje: " + mensaje);
+      console.log("\n");
       respuesta.status(status);
       respuesta.send(mensaje.toString());
     })
@@ -185,5 +181,30 @@ app.get('/tarjeta_fidelidad/', function (peticion, respuesta){
 
 
 var server = app.listen(3000, function(){
+              console.log("\n");
+              console.log("***************************************");
               console.log('Servidor web iniciado en el puerto 3000');
+              console.log("***************************************");
+
+              console.log("\n");
+              console.log("Entradas en el servidor:");
+              console.log("\n");
+
+              console.log("URL: '/registro' | método: POST | parámetros: nombre , correo , pass");
+              console.log("Descripción: Registro de usuario");
+              console.log("\n");
+
+              console.log("URL: '/login' | método: POST | parámetros: correo , pass");
+              console.log("Descripción: Login de usuario");
+              console.log("\n");
+
+              console.log("URL: '/registro_tf' | método: POST | parámetros: correo");
+              console.log("Descripción: Registro de tarjeta de fidelidad");
+              console.log("\n");
+
+              console.log("URL: '/tarjeta_fidelidad' | método: GET | parámetros: correo");
+              console.log("Descripción: Lista de tarjetas asociadas al correo");
+              console.log("\n");
+              console.log("***************************************");
+              console.log("\n");
             });
