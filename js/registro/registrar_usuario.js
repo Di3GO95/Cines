@@ -21,7 +21,6 @@ function comprobar_nombre(){
   var elem_nombre_validacion = document.getElementById("nombre_validacion");
 
   elem_nombre_validacion.style['display'] = 'none';
-  console.log("comprobar nombre: " + elem_nombre.value);
   if (elem_nombre.value == ""){
     elem_nombre_validacion.style['display'] = 'inherit';
     elem_nombre_validacion.innerHTML = "El nombre es obligatorio";
@@ -45,7 +44,6 @@ function comprobar_correo(){
 
   elem_correo_validacion.style['display'] = 'none';
 
-  console.log("comprobar elem_correo: " + elem_correo.value);
   if (elem_correo.value == ""){
     elem_correo_validacion.style['display'] = 'inherit';
     elem_correo_validacion.innerHTML = "El correo es obligatorio";
@@ -69,7 +67,6 @@ function comprobar_pass(){
 
   elem_pass_validacion.style['display'] = 'none';
 
-  console.log("comprobar elem_pass: " + elem_pass.value);
   if (elem_pass.value == ""){
     elem_pass_validacion.style['display'] = 'inherit';
     elem_pass_validacion.innerHTML = "La contraseña es obligatoria";
@@ -93,7 +90,6 @@ function comprobar_pass2(){
 
   elem_pass2_validacion.style['display'] = 'none';
 
-  console.log("comprobar elem_pass2: " + elem_pass2.value);
   if (elem_pass2.value == ""){
     elem_pass2_validacion.style['display'] = 'inherit';
     elem_pass2_validacion.innerHTML = "La contraseña es obligatoria";
@@ -156,13 +152,9 @@ function crea_query_string() {
 }
 
 function procesaRespuesta() {
-  console.log("respuestaaaaa");
-  console.log(peticion_http.Status);
   if (peticion_http.readyState == 4) {
     var mensaje = peticion_http.responseText;
     var color = "";
-
-    console.log("Status: " + peticion_http.status);
 
     if (peticion_http.status == 200){
       color = "green";

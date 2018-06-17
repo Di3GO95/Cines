@@ -87,8 +87,6 @@ function login_crea_query_string() {
 }
 
 function login_procesaRespuesta() {
-  console.log("respuestaaaaa");
-  console.log(peticion_http.Status);
   if (peticion_http.readyState == 4) {
     var mensaje = peticion_http.responseText;
     var color = "";
@@ -104,11 +102,9 @@ function login_procesaRespuesta() {
     Login correcto
     */
     if (peticion_http.status == 200){
-      console.log("Nombre de usuario: " + mensaje);
       login_loguear_usuario_cookie(mensaje);
       login_cambiar_cabecera_usuario(mensaje);
     }else{
-      console.log("El nuevo mensaje es: " + mensaje);
       document.getElementById("cabecera_acceder_validacion").value = mensaje;
       document.getElementById("cabecera_acceder_validacion").innerHTML = mensaje;
       document.getElementById("cabecera_acceder_validacion").style['display'] = "inherit";

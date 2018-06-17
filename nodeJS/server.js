@@ -171,7 +171,7 @@ app.get('/tarjeta_fidelidad/', function (peticion, respuesta){
           mensaje = result[0].puntos;
         }
       }
-      console.log("Intento de tf de usuario: statusCode: " + status + ", mensaje: " + mensaje);
+      console.log("Intento de obtencion de puntos tf de usuario: statusCode: " + status + ", mensaje: " + mensaje);
       console.log("\n");
       respuesta.status(status);
       respuesta.send(mensaje.toString());

@@ -45,13 +45,9 @@ function registrar_tf_crea_query_string() {
 }
 
 function registrar_tf_procesaRespuesta() {
-  console.log("respuestaaaaa");
-  console.log(peticion_http.Status);
   if (peticion_http.readyState == 4) {
     var mensaje = peticion_http.responseText;
     var color = "";
-
-    console.log("Status: " + peticion_http.status);
 
     if (peticion_http.status == 200){
       color = "green";

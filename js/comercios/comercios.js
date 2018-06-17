@@ -17,7 +17,6 @@ function comercios_elegir_cine_registro(cine){
 function registro_de_comercio(){
   var error_registro = comercios_comprobar_nombre();
   if (!error_registro){
-    console.log("registrando comercio");
     document.getElementById("registro_comercios_cargando").style['display'] = "inherit";
     peticion_http = comercios_inicializa_xhr();
     if (peticion_http) {
@@ -57,9 +56,6 @@ function comercios_crea_query_string() {
   var comercio = document.getElementById("comercio");
   var cine = document.getElementById("comercios_cine_elegido_registro");
 
-  console.log("comercio: " + comercio.value);
-  console.log("cine: " + cine.innerHTML);
-
   return "nombre=" + encodeURIComponent(comercio.value) +
          "&cine=" + encodeURIComponent(cine.innerHTML) +
          "&nocache=" + Math.random();
@@ -67,12 +63,8 @@ function comercios_crea_query_string() {
 
 function comercios_procesaRespuesta() {
   if (peticion_http.readyState == 4) {
-    console.log("respuestaaaaa");
     var mensaje = peticion_http.responseText;
     var color = "";
-
-    console.log("Status: " + peticion_http.status);
-    console.log("respuesta: " + mensaje);
 
     //comercio_validacion_registro
     if (peticion_http.status == 200)
@@ -103,16 +95,13 @@ function comercios_elegir_cine_lista(cine){
 }
 
 function comercios_listar_comercios(cine){
-  console.log("listando comercios");
   peticion_http = comercios_inicializa_xhr();
   if (peticion_http) {
     document.getElementById("listado_comercios_cargando").style['display'] = "inherit";
 
     peticion_http.onreadystatechange = comercios_lista_procesaRespuesta;
 
-    console.log("cine: " + cine);
     var url = "../php/listar_comercio.php?cine=" + cine;
-    console.log("Url: " + url);
     peticion_http.open("GET", url, true);
     peticion_http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
@@ -122,12 +111,7 @@ function comercios_listar_comercios(cine){
 
 function comercios_lista_procesaRespuesta(){
     if (peticion_http.readyState == 4) {
-      console.log("respuestaaa");
-
       var mensaje = peticion_http.responseText;
-
-      console.log("Status: " + peticion_http.status);
-      console.log("respuesta: " + mensaje);
 
       if (peticion_http.status == 200){
         document.getElementById("comercios_lista_comercios").innerHTML = mensaje;

@@ -38,7 +38,6 @@ window.onload = function conf_inicial(){
   Solo se llamará a esta función cuando estemos en la página correspondiente
   */
   var url_comercios = "comercios.html";
-  var urlActual = window.location.pathname;
   if (urlActual.indexOf(url_comercios) != -1)
     conf_inicial_registro_comercios();
 }
@@ -54,7 +53,6 @@ window.onload = function conf_inicial(){
 
 function mostrar_cabecera(){
   var fichero = "";
-  console.log(is_usuario_logueado());
   if (is_usuario_logueado()){
     fichero = "../utils/cabecera_usuario_logueado.txt";
   }else{
@@ -126,22 +124,17 @@ function cuerpo_tf_mostrar_cuerpo(){
   var tiene_tf = false;
 
   correo = cuerpo_tf_getCookie("correo_logueado");
-  console.log("Correo: " + correo);
   if (correo == "")
     tiene_tf = false;
   else{
-    console.log("abc");
     var peticion_http = cuerpo_tf_inicializa_xhr();
     peticion_http.onreadystatechange = function() {
-      console.log("status: " + peticion_http.status);
 
       if (peticion_http.readyState == 4){
         if (peticion_http.status == 200) {
           puntos = peticion_http.responseText;
-          console.log("Puntos: " + puntos);
           tiene_tf = true;
         }else{
-          console.log("no tiene correo");
           tiene_tf = false;
         }
 
@@ -158,8 +151,6 @@ function cuerpo_tf_mostrar_cuerpo(){
 }
 
 function registrar_tf_cambiar_cuerpo(tf_registrada){
-  console.log("registrar_tf_cambiar_cuerpo");
-
   if (tf_registrada){
     fichero = "../utils/tarjeta_fidelidad_registrada.txt";
   }else{
@@ -240,5 +231,4 @@ function conf_inicial_registro_comercios(){
 
   xhttp.open("GET", fichero, true);
   xhttp.send();
-
 }

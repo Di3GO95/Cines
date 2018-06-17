@@ -1,10 +1,14 @@
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
+/*
+Cuando el usuario pincha en el boton, esconde/muestra
+el dropdown
+*/
 function desplegar() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-// Close the dropdown if the user clicks outside of it
+// Cierra el dropdown si el usuario pincha fuera de él
 window.onclick = function(event) {
   var despl = (document.getElementById('desplegable'))
 
